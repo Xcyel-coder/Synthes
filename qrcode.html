@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthes - Coming Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background-color: #ffffff;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 50px 40px;
+            max-width: 550px;
+            width: 100%;
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .logo-container {
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .logo {
+            width: 140px;
+            height: 140px;
+            border-radius: 35px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            object-fit: cover;
+            border: 4px solid #f0f0f0;
+        }
+        
+        h1 {
+            font-size: 3.2em;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+        
+        .tagline {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 35px;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        
+        .coming-soon {
+            font-size: 1.6em;
+            color: #667eea;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+        
+        .icon {
+            font-size: 1.8em;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        
+        .description {
+            font-size: 1.25em;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        
+        .divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            margin: 30px auto;
+            border-radius: 2px;
+        }
+        
+        .footer-text {
+            font-size: 0.95em;
+            color: #999;
+            margin-top: 25px;
+            font-weight: 400;
+        }
+        
+        /* For fallback when image doesn't load */
+        .logo-placeholder {
+            width: 140px;
+            height: 140px;
+            border-radius: 35px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 70px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            border: 4px solid #f0f0f0;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 35px 25px;
+            }
+            
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .coming-soon {
+                font-size: 1.3em;
+            }
+            
+            .description {
+                font-size: 1.1em;
+            }
+            
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .logo-placeholder {
+                width: 120px;
+                height: 120px;
+                font-size: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <!-- Using logo.jpg image -->
+            <img src="logo.jpg" alt="Synthes Logo" class="logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\"logo-placeholder\">S</div>'">
+        </div>
+        
+        <h1>Synthes</h1>
+        <p class="tagline">Your Intelligent Mobile Knowledge Assistant</p>
+        
+        <div class="divider"></div>
+        
+        <div class="coming-soon">
+            <span class="icon">🚀</span>
+            <span>Coming Soon</span>
+        </div>
+        
+        <p class="description">
+            We're working hard to bring you an amazing product. Stay tuned!
+        </p>
+        
+        <p class="footer-text">
+            📱 Scan QR code to stay updated
+        </p>
+    </div>
+</body>
+</html>
